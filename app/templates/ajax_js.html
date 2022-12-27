@@ -1,0 +1,18 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+	function saveSubscription(book_id) {
+		var email = document.getElementById('email-input').value;
+		$.ajax({
+			url: "{{url_for('save_subscription')}}",
+			data: {
+				email: email, 
+				book_id: book_id,
+			},
+			type: "POST",
+		}).done(function(reply) {
+			document.getElementById("signup-modal-validated-content").innerHTML = "You're subscribed to <span class='underline--magical'>{{book.title}}</span>!";
+			document.getElementById("signup-modal").style.display = "none";
+		});
+	}
+</script>
