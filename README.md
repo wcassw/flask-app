@@ -25,5 +25,26 @@ You can just pull the repository, and start building on it.
 - https://www.w3schools.com/js/default.asp
 - https://www.w3schools.com/python/default.asp
 
+
 # Runtime
 - python-3.9
+
+# web resources
+- https://coolors.co
+- https://icons8.com
+- https://www.colorbook.io
+- https://fonts.google.com
+- https://unsplash.com
+- https://dribbble.com/shots/popular/web-design
+
+# Hosting
+- AWS
+- https://dashboard.heroku.com
+- https://devcenter.heroku.com/articles/getting-started-with-python
+
+# Postgres
+- https://betterprogramming.pub/creating-a-postgresql-database-for-your-flask-web-app-ffa21fdf37b0
+
+
+
+
