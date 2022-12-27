@@ -1,0 +1,31 @@
+<div id="book-container">
+
+	{% for row_number in range(n_rows) %}
+
+	<div class="book-row">
+
+		{% for i in range(2) %}
+		{% if (row_number*2)+i <= n_books-1 %}
+		<div class="book-card" onclick="loadBook( {{ books[(row_number*2)+i].id }} )">
+			<div class="book-card-image" style="background-image:url('/static/covers/{{books[(row_number*2)+i].cover_path}}')">
+			</div>
+			<div class="book-card-description">
+				<p class="book-title">
+					<span class="underline--magical">{{ books[(row_number*2)+i].title }}</span>
+				</p>
+				<p class="author">{{ books[(row_number*2)+i].author_name }}</p>
+				<p class="additional-info">published in {{ books[(row_number*2)+i].year_published }}</p>
+			</div>
+		</div>
+
+		{% else %}
+
+		<div style="width:50%;margin: 64px 24px 12px 24px;"></div>
+
+		{% endif %}
+		{% endfor %}
+
+	</div>
+
+	{% endfor %}
+</div>
