@@ -1,5 +1,6 @@
 # flask-app web-app Architecture
 This is everything you need to get started with your web-app using Flask. 
+https://flask.palletsprojects.com/en/2.1.x/
 
 This code skeleton has all the required folders for your HTML templates, your CSS stylesheets, your routing, etc.
 
