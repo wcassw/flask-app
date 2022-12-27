@@ -33,3 +33,29 @@ class Subscription(db.Model):
 	__table_args__ = (
 		db.UniqueConstraint('email', 'book_id', name = 'UC_email_book'),
 	)
+
+"""
+>>> from app.models import Subscription
+>>> s = Subscription.query.get(5)
+>>> s
+<Subscription 5>
+>>> s.book
+<Book 3>
+>>> s.book.title
+'The Picture of Dorian Gray'
+
+python manage.py db init
+  OR
+flask db init
+
+python manage.py db upgrade
+  OR
+flask db upgrade
+
+heroku run bash
+>>> python manage.py db init
+>>> python manage.py db migrate
+>>> python manage.py db upgrade
+
+
+"""
