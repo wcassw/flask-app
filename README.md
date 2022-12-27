@@ -24,3 +24,6 @@ You can just pull the repository, and start building on it.
 - https://www.w3schools.com/html/default.asp
 - https://www.w3schools.com/js/default.asp
 - https://www.w3schools.com/python/default.asp
+
+# Runtime
+- python-3.9
