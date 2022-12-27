@@ -1,0 +1,49 @@
+how to integrate Flask with Stripe
+
+To get started, you’ll need to create a Stripe account. Once you have a Stripe account, you’ll need to create a new Stripe account and obtain your Stripe API keys.
+Next, you’ll need to install the Flask and Stripe libraries. You can do this by running the following commands:
+
+pip install flask
+pip install stripe
+
+Once you have the libraries installed, you’ll need to create a new Flask app. You can do this by running the following command:
+flask new myapp
+Once you have a new Flask app, you’ll need to add your Stripe API keys to the app. You can do this by editing the app.config file and adding the following keys:
+
+STRIPE_KEY = ‘your_stripe_key’
+STRIPE_SECRET = ‘your_stripe_secret’
+
+Next, you’ll need to create a new route for processing payments. You can do this by adding the following code to your app:
+
+@app.route(‘/payment’)
+def payment():
+    return “payment_page.html”
+
+Next, you’ll need to create a new HTML file called payment_page.html. This file will contain the payment form.
+
+The payment form will include the following fields:
+- Name
+- Email
+- Credit Card Number
+- Expiration Date
+- CVV
+You can find a more detailed example of the payment form here: https://stripe.com/docs/forms
+
+Once you have the payment form created, you’ll need to add the following code to your app to process payments:
+
+if request.method == ‘POST’:
+    stripe_payment = stripe.payment.create(
+      name=request.form[‘name’],
+      email=request.form[‘email’],
+      credit_card=request.form[‘credit_card’],
+      expiration_date=request.form[‘expiration_date’],
+      cvv=request.form[‘cvv’]
+   )
+if stripe_payment.charge_approved:
+    return “success_page.html”
+else:
+    return “error_page.html”
+
+
+You can find a more detailed example of the code here: 
+   https://stripe.com/docs/payment-processing#flask
