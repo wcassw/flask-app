@@ -1,6 +1,8 @@
 # flask-app web-app Architecture
 This is everything you need to get started with your web-app using Flask. 
 https://flask.palletsprojects.com/en/2.1.x/
+https://jinja.palletsprojects.com/en/3.1.x/
+https://werkzeug.palletsprojects.com/en/2.2.x/
 
 This code skeleton has all the required folders for your HTML templates, your CSS stylesheets, your routing, etc.
 
@@ -46,6 +48,8 @@ You can just pull the repository, and start building on it.
 # Postgres
 - https://betterprogramming.pub/creating-a-postgresql-database-for-your-flask-web-app-ffa21fdf37b0
 
-
+# YouTube
+- https://www.youtube.com/playlist?list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM
+- 
 
 
